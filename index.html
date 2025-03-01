@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>something-someone-somewhere</title>
+        <style>
+            .header {
+                position: sticky;
+                top: 0;
+                padding: 10px 16px;
+                background: #555;
+                color: #f1f1f1;
+            }
+            .hero {
+                margin
+            }
+            .herogrid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                gap: 8px;
+            }
+    
+            .heroheader {
+                grid-column: span 5 / span 5;
+                grid-row: span 2 / span 2;
+            }
+            
+            .herotext {
+                grid-column: span 2 / span 2;
+                grid-row: span 3 / span 3;
+                grid-row-start: 3;
+            }
+
+            .heroimage {
+                grid-column: span 3 / span 3;
+                grid-row: span 3 / span 3;
+                grid-column-start: 3;
+                grid-row-start: 3;
+            }
+        </style>
+        <body>
+            <div class='hero'>
+                <div class='herogrid'>
+                    <div class='heroheader'>
+                        <h1>Welcome!</h1>
+                    </div>
+                    <div class='herotext'>
+                        <p>Hello There. It is I, your lord and master.</br> This is my portfolio, a gathering of my wonders and projects.</p>
+                    </div>
+                    <div class='heroimage'>
+                        <img alt='heroimage' src='https://placecats/500/500'>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>

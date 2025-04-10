@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>someWhere</title>
+        <meta charset="UTF-8" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ececec;
+                color: #000000;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            .dotGothic {
+                font-family: "DotGothic16", sans-serif;
+                font-size: min(10vw, 50px);
+                white-space: pre;
+            }
+
+            .cursor {
+                display: inline-block;
+                width: 1ch;
+                animation: blink 0.75s step-start infinite;
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #121212;
+                    color: #ffffff;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>   <!-- Hero -->
+            <h1 class="dotGothic"><span id="typed"></span><span class="cursor">_</span></h1>
+
+            <script>
+                const fullText = "welcome to someWhere";
+                const typed = document.getElementById("typed");
+                let index = 0;
+
+                function typeText() {
+                    if (index <= fullText.length) {
+                        typed.textContent = fullText.slice(0, index);
+                        index++;
+                        setTimeout(typeText, 100);
+                    }
+                }
+
+                typeText();
+            </script>
+        </div>
+        <div>
+        </div>
+    </body>
+</html>
